@@ -66,7 +66,7 @@ const Home = () => {
             index={31}
           />
         </h1>
-        <h2>Web App Developer/ Mobile App Developer /Javascript Expert </h2>
+        <h2>Web App Developer / Mobile App Developer / Javascript Expert </h2>
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
