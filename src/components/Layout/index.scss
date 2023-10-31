@@ -1,39 +1,101 @@
-.page{
+.container {
+  width: calc(100% - 65px);
+  height: 99%;
+  position: absolute;
+  left: 60px;
+  display: flex;
+  overflow-y: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  scroll-behavior: auto;
+
+  h1 {
+    font-size: 40px;
+    margin: 0;
+    font-family: "Coolvetica";
+    font-weight: 400;
+  }
+
+  .text-zone {
+    width: 45%;
+    margin-left: 20px;
+    margin-top: 60px;
+    box-sizing: border-box;
+
+    p {
+      font-size: 15px;
+      color: #fff;
+      font-family: "sans-serif";
+      font-weight: 300;
+      min-width: fit-content;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+
+      &:nth-of-type(1) {
+        animation-delay: 1.8s;
+      }
+
+      &:nth-of-type(2) {
+        animation-delay: 1.9s;
+      }
+
+      &:nth-of-type(3) {
+        animation-delay: 2s;
+      }
+    }
+  }
+}
+
+.flat-button {
+  color: #ffd700;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 8px 10px;
+  border: 1px solid #ffd700;
+  margin-top: 25px;
+  animation: fadeIn 1s 1.8s backwards;
+  display: block;
+  width: 130px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #022c43;
+
+  &:hover {
+    background-color: #ffd700;
+    color: #333;
+  }
+}
+
+.part-2 {
+  height: auto;
+  width: 45%;
+  max-width: 500px;
+  margin: 20px;
+  border-radius: 20px;
+ 
+}
+
+@media only screen and (max-width: 480px){
+  .container{
     width: 100%;
-    height: 100%;
-    position: absolute;
+    left: 0;
+  }
 }
 
-.top-tags{
-    bottom: auto;
-    top: 35px;
+//tab screen
+@media only screen and (max-width: 870px) {
+  .container {
+    .text-zone {
+      width: 80%;
+    }
+
+    .part-2 {
+      width: 80%;
+    }
+  }
 }
 
-.tags{
-    color: #ffd700;
-    opacity: 0.6;
-    position: absolute;
-    bottom: 0;
-    left: 120px;
-    font-size: 18px;
-    font-family: 'La Belle Aurore';
-}
-
-.bottom-tag-html{
-    margin-left: -20px;
-}
-
-.container{
-    width:100%;
-    will-change: contents;
-    height: 90%;
-    min-height: 566px;
-    position: absolute;
-    opacity: 0;
-    top: 5%;
-    margin: 0 auto;
-    z-index: 1;
-    transform-style: preserve-3d;
-    animation: fadeIn 1s forwards;
-    animation-delay: 1s;
-}
