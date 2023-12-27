@@ -1,0 +1,21 @@
+https://www.youtube.com/watch?v=bmpI252DmiI&t=1s
+https://www.youtube.com/watch?v=G-Cr00UYokU&ab_channel=EGATOR
+
+
+npm i @emailjs/browser (for contact form)
+npm i @fortawesome/free-brands-svg-icons (font icons)
+npm i @fortawesome/free-solid-svg-icons (font icons)
+npm i @fortawesome/react-fontawesome (fontawesome)
+npm i animate.css (animation)
+npm i gsap-trial (adv animation)
+npm i loaders.css (loader)
+npm i react-leaflet (for map)
+npm i react-loaders (for react integration)
+npm i react-router-dom (for routing pages, to navigate)
+npm i sass (for styling)
+
+
+
+
+
+

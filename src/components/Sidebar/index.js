@@ -13,10 +13,18 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 const Sidebar = () => {
   let isOpen = 0,
     disableOverlayClick = 0;
+
+  const [onClickClose,setOnClickClose]=useState(false);
+
+  const onClickHandler=()=>{
+    // console.log("closed")
+    setOnClickClose((onClickClose)=>!onClickClose);
+  }
 
   const dimensions = {
     height: window.innerHeight,
@@ -35,8 +43,11 @@ const Sidebar = () => {
     <>
       <Menu
         width={60}
-        isOpen={isOpen}
+        isOpen={dimensions.width<481?onClickClose:isOpen}
         disableOverlayClick={disableOverlayClick}
+        onOpen={onClickHandler}
+        onClose={onClickHandler}
+      
       >
         <div className="nav-bar nav-bar-burger">
           <Link className="logo" to="/">
@@ -45,7 +56,7 @@ const Sidebar = () => {
           </Link>
 
           <nav>
-            <NavLink exact="true" activeclassname="active" to="/">
+            <NavLink exact="true" activeclassname="active" to="/" onClick={onClickHandler}>
               <FontAwesomeIcon icon={faHome} color="#4d4d4d" />
             </NavLink>
 
@@ -54,6 +65,7 @@ const Sidebar = () => {
               activeclassname="active"
               className="about-link"
               to="/about"
+              onClick={onClickHandler}
             >
               <FontAwesomeIcon icon={faUser} color="#4d4d4d" />
             </NavLink>
@@ -63,8 +75,10 @@ const Sidebar = () => {
               activeclassname="active"
               className="contact-link"
               to="/contact"
+              onClick={onClickHandler}
             >
-              <FontAwesomeIcon icon={faEnvelope} color="#4d4d4d" />
+              <FontAwesomeIcon icon={faEnvelope} color="#4d4d4d"
+              onClick={onClickHandler} />
             </NavLink>
           </nav>
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo-s.png";
-import Me from '../../assets/images/me0.jpg'
+import Me from "../../assets/images/me0.jpg";
 import "./index.scss";
 import { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters";
@@ -68,14 +68,14 @@ const Home = () => {
             />
           </h1>
           <h2>Web App Developer / Mobile App Developer / Javascript Expert </h2>
+          
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
         </div>
-        <img src={Me} alt="me" className="part-2 p2-home"/>
+        <img src={Me} alt="me" className="part-2 p2-home" />
       </div>
-      
-      
+
       <Loader type="pacman" />
     </>
   );
