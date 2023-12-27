@@ -38,17 +38,16 @@ const About = () => {
             technologies on challenging and diverse projects.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
+            I'm quite confident, naturally curious, and perpetually working on
             improving my chops one design problem at a time.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
+            If I need to define myself in one sentence that would be a charming
+            person, a sports fanatic,
             photography enthusiast, and tech-obsessed!!!
           </p>
         </div>
-
-        <div className="stage-cube-cont">
+        <div className="part-2 p2-about">
           <div className="cube-spinner">
             <div className="face1">
               <FontAwesomeIcon icon={faAngular} color="#DD0031" />
